@@ -16,15 +16,13 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var textInputReal : TextInputLayout
     private lateinit var txtReal : TextInputEditText
-
     private lateinit var textInputDolar : TextInputLayout
     private lateinit var txtDolar : TextInputEditText
-
     private lateinit var btnCalcular : Button
-
-
     private lateinit var btnCalcularDolar : Button
     private lateinit var btnConfig : Button
+    var usuario : String? = null
+
 
     override fun onStart() {
         super.onStart()
@@ -64,9 +62,12 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        btnConfig = findViewById(R.id.btnVoltar)
+        btnConfig = findViewById(R.id.btnConfig)
         btnConfig.setOnClickListener {
             val intent = Intent(this, Calculadora::class.java)
+            if(usuario != null){
+                intent.putExtra("nome_usuario" , usuario)
+            }
             startActivity(intent)
         }
 
