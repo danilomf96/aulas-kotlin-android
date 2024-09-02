@@ -1,5 +1,6 @@
 package com.testando.android
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -21,8 +22,9 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var btnCalcular : Button
 
-    private lateinit var btnCalcularDolar : Button
 
+    private lateinit var btnCalcularDolar : Button
+    private lateinit var btnConfig : Button
 
     override fun onStart() {
         super.onStart()
@@ -60,6 +62,12 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        btnConfig = findViewById(R.id.btnVoltar)
+        btnConfig.setOnClickListener {
+            val intent = Intent(this, Calculadora::class.java)
+            startActivity(intent)
         }
 
         //Chamando os botoes
