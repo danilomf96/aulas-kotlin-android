@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PrimeiraPagina">
+
+    <TextView
+        android:id="@+id/bemvindo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="156dp"
+        android:fontFamily="serif-monospace"
+        android:text="Bem-vindo usuario"
+        android:textColor="#7232E3"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/livro2"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:text="GOT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/livro3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/livro1"
+        app:layout_constraintTop_toBottomOf="@+id/bemvindo"
+        app:layout_constraintVertical_bias="0.321" />
+
+    <Button
+        android:id="@+id/livro1"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:text="LOTR"
+        app:layout_constraintEnd_toStartOf="@+id/livro2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/livro2" />
+
+    <Button
+        android:id="@+id/livro3"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:text="Narnia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/livro2"
+        app:layout_constraintTop_toTopOf="@+id/livro2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
