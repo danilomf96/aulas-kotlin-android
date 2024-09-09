@@ -6,6 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.testando.aula09.fragmentos.BlankFragment
 import com.testando.aula09.fragmentos.OutroFragmento
 
 
@@ -33,5 +34,12 @@ class MainActivity : AppCompatActivity() {
         val fragmentManager = supportFragmentManager.beginTransaction()
         fragmentManager.add(R.id.fragmentContainerView2, OutroFragmento())
         fragmentManager.commit()
+
+        btnFrag1.setOnClickListener {
+            supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView2, OutroFragmento()).commit()
+        }
+        btnFrag2.setOnClickListener {
+            supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView2, BlankFragment()).commit()
+        }
     }
 }
