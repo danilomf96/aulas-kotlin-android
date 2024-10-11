@@ -20,4 +20,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvListaLivros"
+        android:layout_width="409dp"
+        android:layout_height="657dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/floatBtnAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/recycler_view_item" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

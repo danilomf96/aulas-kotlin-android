@@ -21,7 +21,6 @@ abstract class LivroDatabase : RoomDatabase() {
             if(tempInstance != null){
                 return tempInstance
             }
-
             synchronized(this){
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
@@ -31,13 +30,7 @@ abstract class LivroDatabase : RoomDatabase() {
 
                 INSTANCE = instance
                 return instance
-
             }
-
-
-
         }
-
-
     }
 }
